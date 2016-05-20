@@ -144,6 +144,8 @@ function processDoc(opts) {
   function writeSetup() {
     var options = setup.__options,
         content, data = {
+          disregardSections: options.disregardSections || false,
+
           scripts: options.scripts,
           styles: options.styles,
           sections: _.keys(setup.sections).join('|'),
